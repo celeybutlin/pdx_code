@@ -11,8 +11,8 @@
 import random
 
 print("Welcome to the Magic 8 Ball!")
-question = input("What would you like for me to answer? ")
+input("What would you like for me to answer? ")
 
-answer = ["Yes, it is likely!", "Oh HELL no!", "Maybe, but I cannot be sure", "Wouldn't you like to know!"]
+answer = ["Yes, it is likely!", "Oh HELL no!", "Maybe, but I cannot be sure", "Wouldn't you like to know!", "Unlikely", "Most definitely", "Better luck asking something else"]
 
 print(random.choice(answer))
