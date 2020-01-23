@@ -16,3 +16,5 @@ noun7 = input("And one last noun: ")
 madlib = f'One day my {adjective1} friend and I decided to go to the {sport} game in {city}. We really wanted to see the {noun1} play the {noun2}. So we {action_verb} our {noun3} down to the {noun4} and bought some {noun5}. We got into the game and it was a lot of fun. We ate some {adjective2} {noun6} and drank some {adjective3} {noun7}. We had a great time! We plan to go again next year!'
 
 print(madlib)
+
+# ctrl + / = automatically comment out a line 
