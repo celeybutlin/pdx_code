@@ -8,16 +8,49 @@
     Randomly pick a mouth
     Assemble and display the emoticon
 """
-
 import random
 
-eyes = [':', ';', '=']
-noses = ['-', 'o', '0']
+eyes = [':', ';', '=', 'X']
+noses = ['-', 'o', '0', '*']
 mouths = [')', '(', '0', 'p', 'P', 'D', '*']
+
+# print(f'{eye}{nose}{mouth}') this is a less efficient way of doing the same thing
+face = eye + nose + mouth
+print(face)
+
+# Advanced version 1: Use a for loop to generate 5 emoticons.
+
+for face in range(5):
+    eye = random.choice(eyes)
+    nose = random.choice(noses)
+    mouth = random.choice(mouths)
+    face = eye + nose + mouth
+    print(face)
+
+
+# # In a while loop, ask the user if they want another emoticon
+n = 0
+while n < 1:
+    input('Do you want another emoticon? ')
+    n += 1
+
+# Advanced version 3: Ask the user if they want to choose each part of the face. If they do, let the user choose that part of the face. If they don't, randomly generate that part.
 
 eye = random.choice(eyes)
 nose = random.choice(noses)
 mouth = random.choice(mouths)
+face = eye + nose + mouth
 
-# print(f'{eye}{nose}{mouth}')
+eyes_choice = input('Do you want to pick the eyes? ').lower()
+if eyes_choice == 'yes':
+    eye = input('What do you want for eyes? ')
+
+nose_choice = input('Do you want to pick the nose? ').lower()
+if nose_choice == 'yes':
+    nose = input('What do you want for a nose? ')
+
+mouth_choice = input('Do you want to pick the mouth? ').lower()
+if mouth_choice == "yes":
+        mouth = input('What do you want for a mouth? ')
+
 print(eye + nose + mouth)
