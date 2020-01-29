@@ -22,30 +22,52 @@ options = ['rock', 'paper', 'scissors']
 computer_choice = random.choice(options)
 their_choice = input('Rock, paper, or scissors? ').lower()
 
-if computer_choice == their_choice:
+if their_choice == computer_choice:
     print('Tie!')
-elif computer_choice == 'rock':
-    if their_choice == 'paper':
-        print('You win!')
-    elif their_choice == 'scissors':
+elif their_choice == 'rock':
+    if computer_choice == 'paper':
         print('You lose!')
-    else:
-        print('Invalid input.')
-elif computer_choice == 'paper':
-    if their_choice == 'rock':
+    elif computer_choice == 'scissors':
         print('You win!')
-    elif their_choice == 'scissors':
-        print('You lose!')
-    else:
-        print('Invalid input.')
-elif computer_choice == 'scissors':
-    if their_choice == 'rock':
+elif their_choice == 'paper':
+    if computer_choice == 'rock':
         print('You win!')
-    elif their_choice == 'paper':
+    elif computer_choice == 'scissors':
         print('You lose!')
-    else:
-        print('Invalid input.')
+elif their_choice == 'scissors':
+    if computer_choice == 'rock':
+        print('You lose!')
+    elif computer_choice == 'paper':
+        print('You win!')
+else:
+     print('Invalid input.')
 
 print(f'The computer chose {computer_choice}')
 
+# Advanced Version 2: Ask the user if they want to play again, using a while loop.
 
+play_again = input('Do you want to play agian? ').lower()
+
+while play_again == 'yes':
+    their_choice = input('Rock, paper, or scissors? ')
+    if their_choice == computer_choice:
+     print('Tie!')
+    elif their_choice == 'rock':
+     if computer_choice == 'paper':
+        print('You lose!')
+     elif computer_choice == 'scissors':
+        print('You win!')
+    elif their_choice == 'paper':
+     if computer_choice == 'rock':
+        print('You win!')
+     elif computer_choice == 'scissors':
+        print('You lose!')
+    elif their_choice == 'scissors':
+        if computer_choice == 'rock':
+         print('You lose!')
+        elif computer_choice == 'paper':
+         print('You win!')
+    else:
+     print('Invalid input.')
+    print(f'The computer chose {computer_choice}')
+    play_again = input('Do you want to play again? ').lower()
