@@ -44,12 +44,13 @@ Below is some sample input/output:
 
 
 """
-# # Version 1
+# # VERSION 1
 # feet = float(input('How many feet? '))
 # meters = feet * 0.3048
 # print(meters)
 
-# # Version 2
+
+# # VERSION 2
 # distance = float(input('What is the distance? '))
 # units = input('What are the units? ft, mi, m, or km? ')
 
@@ -64,7 +65,8 @@ Below is some sample input/output:
 
 # print(f'{distance} {units} is {meters} meters')
 
-# # Version 3
+
+# # VERSION 3
 # conversion = {
 #     "in" : 0.0254,
 #     "ft" : 0.3048,
@@ -81,7 +83,8 @@ Below is some sample input/output:
 
 # print(f'{distance} is {distance_meters} meters')
 
-# Version 4
+
+# VERSION 4
 conversion = {
     "in" : 0.0254,
     "ft" : 0.3048,
@@ -94,8 +97,14 @@ conversion = {
 distance = float(input('What is the distance? '))
 unit_input = input('What are the units? in, ft, mi, yd, m, or km? ')
 unit_output = input('What unit do you want to convert it to? in, ft, mi, yd, m, or km? ')
+
+if unit_input not in conversion or unit_output not in conversion:
+    print("Please enter a valid unit.")
+    quit()
+
 distance_meters = distance * conversion[unit_input]
 distance_choice = distance_meters / conversion[unit_output]
+
 
 print(f'{distance} {unit_input} is {distance_choice} {unit_output}')
 
