@@ -41,6 +41,8 @@ for key in pets:
 
 print(f"There are {count} dogs")
 
+
+
 multiple = {
     "two": 2,
     "three": 3,
