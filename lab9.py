@@ -44,44 +44,44 @@ Below is some sample input/output:
 
 
 """
-# # VERSION 1
-# feet = float(input('How many feet? '))
-# meters = feet * 0.3048
-# print(meters)
+# VERSION 1
+feet = float(input('How many feet? '))
+meters = feet * 0.3048
+print(meters)
 
 
-# # VERSION 2
-# distance = float(input('What is the distance? '))
-# units = input('What are the units? ft, mi, m, or km? ')
+# VERSION 2
+distance = float(input('What is the distance? '))
+units = input('What are the units? ft, mi, m, or km? ')
 
-# if units == "mi":
-#     meters = distance * 1609.34
-# elif units == "ft":
-#     meters = distance *0.3048
-# elif units == "m":
-#     meters = distance
-# elif units == "km":
-#     meters = distance * 1000
+if units == "mi":
+    meters = distance * 1609.34
+elif units == "ft":
+    meters = distance *0.3048
+elif units == "m":
+    meters = distance
+elif units == "km":
+    meters = distance * 1000
 
-# print(f'{distance} {units} is {meters} meters')
+print(f'{distance} {units} is {meters} meters')
 
 
-# # VERSION 3
-# conversion = {
-#     "in" : 0.0254,
-#     "ft" : 0.3048,
-#     "yd" : 0.9144,
-#     "m" : 1,
-#     "mi" : 1609.34,
-#     "km" : 1000
-# }
+# VERSION 3
+conversion = {
+    "in" : 0.0254,
+    "ft" : 0.3048,
+    "yd" : 0.9144,
+    "m" : 1,
+    "mi" : 1609.34,
+    "km" : 1000
+}
 
-# distance = float(input('What is the distance? '))
-# units = input('What are the units? in, ft, mi, yd, m, or km? ')
+distance = float(input('What is the distance? '))
+units = input('What are the units? in, ft, mi, yd, m, or km? ')
 
-# distance_meters = distance * conversion[units]
+distance_meters = distance * conversion[units]
 
-# print(f'{distance} is {distance_meters} meters')
+print(f'{distance} is {distance_meters} meters')
 
 
 # VERSION 4
@@ -107,6 +107,3 @@ distance_choice = distance_meters / conversion[unit_output]
 
 
 print(f'{distance} {unit_input} is {distance_choice} {unit_output}')
-
-
-
