@@ -23,6 +23,7 @@ def letter_splitter(user_input):
         letter = list(word)
         all_letters += letter
         all_letters.sort()
+    return all_letters
 
 if letter_splitter(first_string) == letter_splitter(second_string):
     print(f'{first_string} and {second_string} are anagrams!')
